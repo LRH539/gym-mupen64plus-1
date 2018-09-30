@@ -172,7 +172,11 @@ class MarioKartEnv(Mupen64PlusEnv):
         self._press_button(ControllerState.A_BUTTON)
         self._wait(count=3, wait_for='animation')
 
-        # Select GrandPrix or TimeTrials (GrandPrix highlighted by default - down to switch to TimeTrials)
+        # Switch to multiplayer
+        self._press_button(ControllerState.JOYSTICK_RIGHT)
+        self._wait(count=3, wait_for='animation')
+
+        # Select VS (GrandPrix highlighted by default - down to switch to VS)
         self._press_button(ControllerState.JOYSTICK_DOWN)
         self._wait(count=3, wait_for='animation')
 
