@@ -1,6 +1,8 @@
 # The port number to use for the controller server:
 PORT_NUMBER_1: 8082
 PORT_NUMBER_2: 8083
+PORT_NUMBER_3: 8084
+PORT_NUMBER_4: 8085
 
 # How long, at most, in seconds to block waiting for the controller 
 #   server to send controls (the action) before returning:
