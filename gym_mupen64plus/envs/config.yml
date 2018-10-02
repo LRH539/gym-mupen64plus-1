@@ -1,5 +1,6 @@
 # The port number to use for the controller server:
-PORT_NUMBER: 8082
+PORT_NUMBER_1: 8082
+PORT_NUMBER_2: 8083
 
 # How long, at most, in seconds to block waiting for the controller 
 #   server to send controls (the action) before returning:
@@ -12,11 +13,21 @@ SCR_D: 3
 
 # The offset location of where the emulator window appears on screen:
 # (has no effect when using XVFB - offset is 0,0)
-OFFSET_X: 400
-OFFSET_Y: 240
+OFFSET_X: 0
+OFFSET_Y: 0
+
+BOT_1_SCR_W: 320
+BOT_1_SCR_H: 240
+BOT_2_SCR_W: 320
+BOT_2_SCR_H: 240
+
+BOT_1_OFFSET_X: 160
+BOT_1_OFFSET_Y: 120 
+BOT_2_OFFSET_X: 360
+BOT_2_OFFSET_Y: 360
 
 # XVFB config:
-USE_XVFB: true
+USE_XVFB: false
 XVFB_CMD: Xvfb
 TMP_DIR: /dev/shm
 VGLRUN_CMD: vglrun
