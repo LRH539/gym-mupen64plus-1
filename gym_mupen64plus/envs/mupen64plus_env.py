@@ -156,12 +156,12 @@ class Mupen64PlusEnv(gym.Env):
         self._stop_controller_server()
 
     def _start_controller_server(self):
-        server = ControllerHTTPServer(('', config['PORT_NUMBER']),
+        server = ControllerHTTPServer(('', config['PORT_NUMBER_1']),
                                       config['ACTION_TIMEOUT'])
         server_thread = threading.Thread(target=server.serve_forever, args=())
         server_thread.daemon = True
         server_thread.start()
-        print('ControllerHTTPServer started on port ', config['PORT_NUMBER'])
+        print('ControllerHTTPServer started on port ', config['PORT_NUMBER_1'])
         return server, server_thread
 
     def _stop_controller_server(self):
